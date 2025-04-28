@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dealer Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-500 to-blue-500 min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6">
+    <h1 class="text-3xl font-bold text-center text-indigo-700">Dealer Login</h1>
+
+    <div id="loginForm" class="space-y-4">
+      <input id="email" type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input id="password" type="password" placeholder="Password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <button onclick="login()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-lg font-semibold transition">Login</button>
+      <p id="error" class="text-red-500 text-center text-sm"></p>
+    </div>
+
+    <div id="dashboard" class="hidden space-y-6">
+      <h2 class="text-2xl font-semibold text-center text-green-600">Welcome, <span id="dealerName"></span>!</h2>
+      
+      <div class="bg-gray-100 p-4 rounded-lg text-center">
+        <p class="text-gray-600">Current Stock:</p>
+        <p id="currentStock" class="text-3xl font-bold text-indigo-700"></p>
+      </div>
+
+      <div class="space-y-2">
+        <input id="quantitySold" type="number" placeholder="Quantity Sold" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+        <button onclick="recordSale()" class="w-full bg-green-500 hover:bg-green-600 text-white p-3 rounded-lg font-semibold transition">Record Sale</button>
+      </div>
+
+      <button onclick="logout()" class="w-full bg-red-500 hover:bg-red-600 text-white p-3 rounded-lg font-semibold transition">Logout</button>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
 
