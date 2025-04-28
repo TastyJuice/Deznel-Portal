@@ -1,11 +1,12 @@
 // Your Firebase project config
 const firebaseConfig = {
   apiKey: "AIzaSyCjthh-d1TmjyLMcbjiZ1jbi_mJxtPQlYY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "241764051010",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  authDomain: "deznel-s-snack-pack.firebaseapp.com",
+  projectId: "deznel-s-snack-pack",
+  storageBucket: "deznel-s-snack-pack.firebasestorage.app",
+  messagingSenderId: "241764051010",
+  appId: "1:241764051010:web:4fa5c9502fdb618c2625db",
+  measurementId: "G-7KFTSZB4ME"
 };
 
 // Initialize Firebase
